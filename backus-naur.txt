@@ -1,0 +1,24 @@
+// Forma padronizada de regras_producao.txt na Backus-Naur Form
+
+<Partida> ::= <Carta_C> <Partida> <Carta_C> 
+            | <Carta_P> <Partida> <Carta_P> 
+            | <Carta_V> <Partida> <Carta_V> 
+            | <Carta_R> <Partida> <Carta_R> 
+            | <Carta_A> <Partida> <Carta_A> 
+            | "#"
+
+<Carta_C> ::= "[" "(" <Num_C> ")" "," <Num_P> "," <Num_V> "," <Num_R> "," <Num_A> "]"
+<Carta_P> ::= "[" <Num_C> "," "(" <Num_P> ")" "," <Num_V> "," <Num_R> "," <Num_A> "]"
+<Carta_V> ::= "[" <Num_C> "," <Num_P> "," "(" <Num_V> ")" "," <Num_R> "," <Num_A> "]"
+<Carta_R> ::= "[" <Num_C> "," <Num_P> "," <Num_V> "," "(" <Num_R> ")" "," <Num_A> "]"
+<Carta_A> ::= "[" <Num_C> "," <Num_P> "," <Num_V> "," <Num_R> "," "(" <Num_A> ")" "]"
+
+<Num_C>   ::= <Dig_1_9> <Dig_0_9> <Dig_0_9> <Dig_0_9> | <Dig_1_9> <Dig_0_9> <Dig_0_9> | <Dig_1_9> <Dig_0_9> | <Dig_1_9>
+<Num_P>   ::= <Dig_1_9> <Dig_0_9> <Dig_0_9> <Dig_0_9> <Dig_0_9> | <Dig_1_9> <Dig_0_9> <Dig_0_9> <Dig_0_9> | <Dig_1_9> <Dig_0_9> <Dig_0_9> | <Dig_1_9> <Dig_0_9> | <Dig_1_9>
+<Num_V>   ::= <Dig_1_9> <Dig_0_9> <Dig_0_9> | <Dig_1_9> <Dig_0_9> | <Dig_1_9>
+<Num_R>   ::= <Dig_0_9>
+<Num_A>   ::= <Dig_0_9>
+
+<Dig_1_9> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<Dig_0_9> ::= "0" | <Dig_1_9> 
+
