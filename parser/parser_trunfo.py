@@ -109,7 +109,7 @@ def parser_trunfo(cadeia_jogo):
         resultado = parser.parse(cadeia_jogo)
         
         # Se o PLY retornar None sem disparar erro, a cadeia era completamente vazia
-        if resultado == None:
+        if resultado == None or resultado == (0, 0, []): # Rejeita a cadeia se o jogo tiver 0 rodadas (apenas um '#')
             return "CADEIA REJEITADA\nEntrada vazia"
             
         pontos_j1, pontos_j2, historico = resultado # Resulatdo da última recursão (de dentro para fora)
