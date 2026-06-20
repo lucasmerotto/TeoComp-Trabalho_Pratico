@@ -1,0 +1,2 @@
+CADEIA REJEITADA
+Agressividade 10 fora do limite (0-9)

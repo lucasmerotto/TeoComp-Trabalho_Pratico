@@ -1,0 +1,2 @@
+CADEIA REJEITADA
+Erro Léxico: Caractere inválido ou inesperado 'a' na posição 21

@@ -1,0 +1,2 @@
+CADEIA REJEITADA
+Erro de Sintaxe. Token inesperado: '100' (Tipo: NUMBER) na posição 27.
