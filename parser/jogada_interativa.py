@@ -58,9 +58,8 @@ def main():
         carta_j1 = coletar_carta("Turma (Jogador 1)", i)
         carta_j2 = coletar_carta("Professor (Jogador 2)", i)
         
-        cartas_j1.append(carta_j1)
-        # Inserimos no início da lista de J2 para manter o espelhamento correto na cadeia final
-        cartas_j2.insert(0, carta_j2)
+        cartas_j1.insert(0, carta_j1)  
+        cartas_j2.append(carta_j2)     
 
     # Junta as cartas com espaços simples entre elas
     str_j1 = " ".join(cartas_j1)
