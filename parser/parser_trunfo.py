@@ -22,7 +22,6 @@ def p_partida_base(p):
     p[0] = (0, 0, []) # p[0] é o lado esquerdo da regra de produção
 
 # Regra Recursiva: Mapeia o balanceamento das 5 cartas possíveis.
-# Note o 'SPACE' exigido estritamente entre as cartas e o miolo da partida!
 def p_partida_recursiva(p):
     '''partida : carta_c SPACE partida SPACE carta_c
                | carta_p SPACE partida SPACE carta_p
